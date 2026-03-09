@@ -1,0 +1,59 @@
+@import 'tailwindcss';
+:root {
+  font-family: Rubik, sans-serif;
+  
+  @theme{
+    --color-grey-50: #F4F6FA;
+    --color-grey-500: #626C7F;
+
+    --color-blue-50: #EBF0FF;
+    --color-blue-100: #EDF1F9;
+    --color-blue-300: #ABC1E1;
+    --color-blue-500: #306AFF;
+    --color-blue-850: #3B4D66;
+    --color-blue-900: #313E51;
+    --color-blue-950: #2D3949;
+
+    --color-green-100: #E0FDEF;
+    --color-green-500: #2FD887;
+
+    --color-purple-100: #F6E7FF;
+    --color-purple-600: #A729F5;
+
+    --color-orange-50: #FFF5ED;
+    --color-orange-400: #FF7E35;
+
+    --color-red-500: #EE5454;
+
+    --text-preset-1: 144px;
+    --leading-preset-1: 100%;
+    --font-weight-preset-1: 500;
+    --text-preset-1-mobile: 88px;
+
+    --text-preset-2-mediun: 64px;
+    --leading-preset-2: 100%;
+    --font-weight-preset-2-medium: 500;
+    --text-preset-2-mobile-medium: 40px;
+    --text-preset-2-light: 64px;
+    --text-preset-2-mobile-light: 40px;
+    --font-weight-preset-2-light: 300;
+
+    --text-preset-3: 36px;
+    --leading-preset-3: 120%;
+    --font-weight-preset-3: 500;
+    --text-preset-3-mobile: 20px;
+
+    --text-preset-4: 28px;
+    --leading-preset-4: 100%;
+    --font-weight-preset-4: 500;
+    --text-preset-4-mobile: 18px;
+
+    --text-preset-5-medium: 24px;
+    --leading-preset-5: 150%;
+    --font-weight-preset-5-medium: 500;
+    --text-preset-5-mobile: 14px;
+    
+    --text-preset-6: 20px;
+    --leading-preset-6: 120%;
+  }
+}

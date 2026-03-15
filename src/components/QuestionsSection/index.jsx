@@ -7,7 +7,7 @@ const QuestionSection = ({quiz, question, onSelectOption, currentQuestionIndex, 
     return (
         <main className={"mt-8 sm:mt-12 md:mt-21.25 flex flex-col md:flex-row gap-10 md:gap-32"}>
             <QuestionsTitle quiz={quiz} question={question} currentQuestionIndex={currentQuestionIndex}/>
-            <div className={"flex flex-col gap-8"}>
+            <div className={"flex flex-col gap-8 max-w-141 w-full"}>
                 <div className={"flex flex-col gap-6 md:gap-4"}>
                     {question.options.map((option, index) =>
                         <QuestionOptions key={index} option={option} letter={letterOptions[index]} onSelectOption={() => onSelectOption(option)} selectedOption={selectedOption} isSubmitted={isSubmitted} correctAnswer={question.answer}/>)}

@@ -6,12 +6,24 @@ import QuestionSection from "../components/QuestionsSection/QuestionSection.jsx"
 const QuestionsPage = () => {
     const {title} = useParams()
     const quiz = data.quizzes.find(q => q.title.toLowerCase() === title.toLowerCase())
+    console.log("quiz", quiz)
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
+    const [selectedOption, setSelectedOption] = useState(null)
+    const [isSubmitted, setIsSubmitted] = useState(false)
     const currentQuestion = quiz.questions[currentQuestionIndex]
+    const handleSelectOption = (option) => {
+        setSelectedOption(option)
+    }
 
-    const handleSelectOption = () => {
-        if(currentQuestionIndex < quiz.questions.length - 1){
+    const handleSubmitAnswer = () => {
+        setIsSubmitted(true)
+    }
+
+    const handleNextQuestion = () => {
+        if(currentQuestionIndex < quiz.questions.length - 1) {
             setCurrentQuestionIndex(prev => prev + 1)
+            setSelectedOption(null)
+            setIsSubmitted(false)
         }else{
             console.log("finished")
         }
@@ -28,7 +40,8 @@ const QuestionsPage = () => {
                 </div>
                 <CustomSwitchTheme/>
             </div>
-                <QuestionSection currentQuestionIndex={currentQuestionIndex} quiz={quiz} question={currentQuestion} onSelectOption={handleSelectOption}/>
+                <QuestionSection currentQuestionIndex={currentQuestionIndex} quiz={quiz} question={currentQuestion} onSelectOption={handleSelectOption} onSubmit={handleSubmitAnswer} selectedOption={selectedOption}
+                isSubmitted={isSubmitted} onNextQuestion={handleNextQuestion}/>
         </>
     );
 };

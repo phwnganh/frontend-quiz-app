@@ -17,12 +17,12 @@ const QuestionOptions = ({option, onSelectOption, letter, selectedOption, isSubm
     const isCorrectIcon = isSubmitted && isCorrectAnswer
     const isWrongIcon = isSubmitted && isWrongAnswer
     return (
-        <div role={"button"} onClick={!isSubmitted ? onSelectOption : undefined} className={`bg-white rounded-3xl shadow-sm p-4 md:p-6 flex items-center justify-between gap-8 cursor-pointer hover:outline-3 hover:outline-purple-600 ${outlineAnswer}`}>
+        <div role={"button"} onClick={!isSubmitted ? onSelectOption : undefined} className={`bg-white dark:bg-blue-850 rounded-3xl shadow-sm p-4 md:p-6 flex items-center justify-between gap-8 cursor-pointer hover:outline-3 hover:outline-purple-600 ${outlineAnswer}`}>
             <div className={"flex items-center gap-8"}>
-                <div className={`flex justify-center items-center w-10 h-10 sm:w-14 sm:h-14 shrink-0 rounded-xl bg-grey-50`}>
+                <div className={`flex justify-center items-center w-10 h-10 sm:w-14 sm:h-14 shrink-0 rounded-xl bg-grey-50 `}>
                     <h1 className={"text-grey-500 text-preset-4-mobile sm:text-preset-4 leading-preset-4 font-preset-4"}>{letter}</h1>
                 </div>
-                <h4 className={"text-preset-4-mobile sm:text-preset-4 leading-preset-4 font-preset-4 text-blue-900"}>{option}</h4>
+                <h4 className={"text-preset-4-mobile sm:text-preset-4 leading-preset-4 font-preset-4 text-blue-900 dark:text-white"}>{option}</h4>
             </div>
             {isCorrectIcon && <img src={correctIcon} alt="Correct-Answer" />}
             {isWrongIcon && <img src={wrongIcon} alt="Wrong Answer" />}

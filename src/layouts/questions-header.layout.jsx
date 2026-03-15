@@ -8,7 +8,7 @@ const QuestionsHeader = ({quiz, title}) => {
                 <div className={`flex justify-center items-center w-10 h-10 sm:w-14 sm:h-14 shrink-0 rounded-xl ${quiz.bgColor}`}>
                     <img src={quiz.icon} alt={quiz.title}/>
                 </div>
-                <h3 className={"text-preset-4-mobile sm:text-preset-4 leading-preset-4 font-preset-4 text-blue-900"}>{title}</h3>
+                <h3 className={"text-preset-4-mobile sm:text-preset-4 leading-preset-4 font-preset-4 text-blue-900 dark:text-white"}>{title}</h3>
             </div>
             <CustomSwitchTheme/>
         </div>

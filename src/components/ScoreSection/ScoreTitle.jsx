@@ -2,8 +2,8 @@
 const ScoreTitle = () => {
     return (
         <div className={"flex flex-col gap-2"}>
-            <h1 className={"text-preset-2-mobile-light sm:text-preset-2-light leading-preset-2 font-preset-2-light text-blue-900"}>Quiz completed</h1>
-            <span className={"text-preset-2-mobile-medium sm:text-preset-2-mediun leading-preset-2 font-preset-2-medium text-blue-900"}>You scored...</span>
+            <h1 className={"text-preset-2-mobile-light sm:text-preset-2-light leading-preset-2 font-preset-2-light text-blue-900 dark:text-white"}>Quiz completed</h1>
+            <span className={"text-preset-2-mobile-medium sm:text-preset-2-mediun leading-preset-2 font-preset-2-medium text-blue-900 dark:text-white"}>You scored...</span>
         </div>
     );
 };

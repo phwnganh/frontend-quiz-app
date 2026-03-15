@@ -3,6 +3,7 @@ import CustomSwitchTheme from "../components/CustomSwitchTheme.jsx";
 import {useNavigate, useParams} from 'react-router-dom'
 import data from '../data/data.json'
 import QuestionSection from "../components/QuestionsSection/index.jsx";
+import QuestionsHeader from "../layouts/questions-header.layout.jsx";
 const QuestionsPage = () => {
     const {title} = useParams()
     const quiz = data.quizzes.find(q => q.title.toLowerCase() === title.toLowerCase())
@@ -40,15 +41,7 @@ const QuestionsPage = () => {
     if (!quiz) return;
     return (
         <>
-            <div className={"flex justify-between items-center"}>
-                <div className={"flex items-center gap-6"}>
-                    <div className={`flex justify-center items-center w-14 h-14 shrink-0 rounded-xl ${quiz.bgColor}`}>
-                        <img src={quiz.icon} alt={quiz.title}/>
-                    </div>
-                    <h3 className={"text-preset-4 leading-preset-4 font-preset-4 text-blue-900"}>{title}</h3>
-                </div>
-                <CustomSwitchTheme/>
-            </div>
+            <QuestionsHeader quiz={quiz} title={title}/>
                 <QuestionSection currentQuestionIndex={currentQuestionIndex} quiz={quiz} question={currentQuestion} onSelectOption={handleSelectOption} onSubmit={handleSubmitAnswer} selectedOption={selectedOption}
                 isSubmitted={isSubmitted} onNextQuestion={handleNextQuestion}/>
         </>

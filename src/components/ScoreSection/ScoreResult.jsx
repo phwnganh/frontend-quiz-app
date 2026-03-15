@@ -12,7 +12,7 @@ const ScoreResult = ({quiz, score, total}) => {
 
             <div className={"flex flex-col gap-4"}>
                 <h1 className={"text-preset-1-mobile sm:text-preset-1 leading-preset-1 font-preset-1 text-blue-900"}>{score}</h1>
-                <span className={"text-grey-500 text-preset-4-mobile sm:text-preset-5-medium leading-preset-5"}>out of {total}</span>
+                <span className={"text-grey-500 text-preset-4-mobile sm:text-preset-5-medium leading-preset-4 sm:leading-preset-5"}>out of {total}</span>
             </div>
         </div>
     );

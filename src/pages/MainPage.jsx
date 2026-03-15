@@ -4,7 +4,9 @@ import MenuStartedSection from "../components/MenuStartedSection/index.jsx";
 const MainPage = () => {
     return (
         <>
-            <CustomSwitchTheme/>
+            <div className={"px-6 pb-4"}>
+                <CustomSwitchTheme/>
+            </div>
             <MenuStartedSection/>
         </>
     );

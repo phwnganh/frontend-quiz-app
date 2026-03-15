@@ -4,7 +4,7 @@ import MenuStartedItem from "./MenuStartedItem.jsx";
 
 const MenuStartedList = () => {
     return (
-        <div className={"flex flex-col gap-4"}>
+        <div className={"pt-8 px-6 sm:pt-0 sm:px-0 flex flex-col gap-4 sm:gap-6 md:gap-4"}>
             {data.quizzes.map((quiz, index) =>
                 <MenuStartedItem key={index} item={quiz} />)
             }

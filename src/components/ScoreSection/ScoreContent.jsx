@@ -1,12 +1,13 @@
 import ScoreResult from "./ScoreResult.jsx";
 import {useNavigate} from "react-router-dom";
+import CustomButton from "../uis/CustomButton.jsx";
 
 const ScoreContent = ({quiz, score, total}) => {
     const navigate = useNavigate()
     return (
-        <div className={"flex flex-col gap-8"}>
+        <div className={"flex flex-col gap-4 sm:gap-8"}>
             <ScoreResult quiz={quiz} score={score} total={total}/>
-            <button type={"reset"} onClick={() => navigate("/")} className={"flex justify-center items-center text-white text-preset-4 font-preset-4 leading-preset-4 bg-purple-600 p-8 rounded-3xl"}>Play Again</button>
+            <CustomButton type={"reset"} onClick={() => navigate("/")} content={"Play Again"} />
         </div>
     );
 };

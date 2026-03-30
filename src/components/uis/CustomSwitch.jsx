@@ -19,7 +19,7 @@ const CustomSwitch = () => {
 
     return (
         <label htmlFor={"toggle-theme"} className={"h-5 sm:h-7 w-8 sm:w-12 relative inline-block"}>
-            <input id={"switch-mode"} aria-label={"enable switch mode"} type={"checkbox"} checked={isDark} onChange={handleToggleTheme} className={"sr-only peer "}/>
+            <input id={"switch-mode"} aria-label={"enable theme switch"} type={"checkbox"} checked={isDark} onChange={handleToggleTheme} className={"sr-only peer "}/>
             <div className={"w-full h-full rounded-full bg-purple-600 peer-checked:bg-purple transition-colors"}></div>
             <div className={"absolute top-0.75 left-0.75 h-3 w-3 sm:h-5 sm:w-5 rounded-full bg-white peer-checked:translate-x-full"}></div>
         </label>

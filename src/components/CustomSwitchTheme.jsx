@@ -7,13 +7,13 @@ const CustomSwitchTheme = () => {
     return (
         <section className={"flex justify-end items-center gap-2 sm:gap-4"}>
             <div className={"flex justify-center items-center w-4 h-4 sm:w-6 sm:h-6 shrink-0"}>
-                <img className={"dark:hidden"} src={SunDarkIcon} alt={"Sun dark"} />
-                <img className={"hidden dark:block"} src={SunLightIcon} alt={"Sun light"} />
+                <img className={"dark:hidden"} src={SunDarkIcon} alt={"Sun dark"} aria-hidden="true"/>
+                <img className={"hidden dark:block"} src={SunLightIcon} alt={"Sun light"} aria-hidden="true"/>
             </div>
             <CustomSwitch/>
             <div className={"flex justify-center items-center w-4 h-4 sm:w-6 sm:h-6 shrink-0"}>
-                <img className={"dark:hidden"} src={MoonDarkIcon} alt={"Moon dark"} />
-                <img className={"hidden dark:block"} src={MoonLightIcon} alt={"Moon light"} />
+                <img className={"dark:hidden"} src={MoonDarkIcon} alt={"Moon dark"} aria-hidden="true"/>
+                <img className={"hidden dark:block"} src={MoonLightIcon} alt={"Moon light"} aria-hidden="true"/>
             </div>
         </section>
     );

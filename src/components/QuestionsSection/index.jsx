@@ -5,7 +5,7 @@ import CustomButton from "../uis/CustomButton.jsx";
 const QuestionSection = ({quiz, question, onSelectOption, currentQuestionIndex, onSubmit, selectedOption, onNextQuestion, isSubmitted}) => {
     const letterOptions = ['A', 'B', 'C', 'D']
     return (
-        <main className={"px-6 sm:px-16 md:px-0 mt-8 sm:mt-12 md:mt-21.25 flex flex-col md:flex-row gap-10 md:gap-32"}>
+        <main tabIndex={-1} className={"px-6 sm:px-16 md:px-0 mt-8 sm:mt-12 md:mt-21.25 flex flex-col md:flex-row gap-10 md:gap-32"}>
             <QuestionsTitle quiz={quiz} question={question} currentQuestionIndex={currentQuestionIndex}/>
             <div className={"flex flex-col gap-8 max-w-141 w-full"}>
                 <div className={"flex flex-col gap-6 md:gap-4"}>

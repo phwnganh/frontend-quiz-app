@@ -3,12 +3,12 @@ import MenuStartedSection from "../components/MenuStartedSection/index.jsx";
 
 const MainPage = () => {
     return (
-        <main>
-            <div className={"px-6 pb-4"}>
+        <>
+            <header className={"px-6 pb-4"}>
                 <CustomSwitchTheme/>
-            </div>
+            </header>
             <MenuStartedSection/>
-        </main>
+        </>
     );
 };
 
